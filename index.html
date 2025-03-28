@@ -2,13 +2,25 @@
 <html>
 <body>
 
-<h1>JavaScript Strings</h1>
+<h2>JavaScript Math.random() with Images</h2>
 
 <p id="demo"></p>
+<img id="randomImage" src="" alt="Random Image" width="300">
 
 <script>
-let text = "John Doe";  // String written inside quotes
+let text;
+let imgUrl;
+
+if (Math.random() < 0.5) {
+  text = "<a href='https://w3schools.com'>Visit W3Schools</a>";
+  imgUrl = "mew.jpg";  // Replace with your image file name
+} else {
+  text = "<a href='https://wwf.org'>Visit WWF</a>";
+  imgUrl = "mew.jpg";  // Replace with your image file name
+}
+
 document.getElementById("demo").innerHTML = text;
+document.getElementById("randomImage").src = imgUrl;
 </script>
 
 </body>
